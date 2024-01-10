@@ -1,12 +1,13 @@
-const express = require('express');
+import { getUserList, userInsert, userUpdate, userDelete } from '../controllers/controllers';
 
+const express = require('express');
 const routes = express.Router()
 
 
-routes.get()
+routes.get("/listar", getUserList)
 
-routes.post()
+routes.post("/inserir", userInsert)
 
-routes.put()
+routes.put("/modificar", userUpdate)
 
-routes.delete()
+routes.delete("/deletar", userDelete)
